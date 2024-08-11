@@ -1,2 +1,5 @@
-# csd-340
-CSD-340 course work "Web Development with HTML, CSS and Javascript"
+# CSD 340 Web Development with HTML and CSS
+
+## Contributors
+- Prof. Sue Sampson
+- Alex Zayas
