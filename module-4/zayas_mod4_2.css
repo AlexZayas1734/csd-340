@@ -1,0 +1,39 @@
+#container {
+    margin: 0 auto;
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+}
+
+#image-gallery h3 {
+    text-align: center;
+    color: grey;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: red;
+}
+
+img {
+    height: 300px;
+}
+
+.back-to-landing-page {
+    text-align: right; 
+    margin-top: 20px;
+}
