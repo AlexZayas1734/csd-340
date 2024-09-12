@@ -1,0 +1,114 @@
+/* Header */
+header {
+    background-color: green;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+/* Navbar */
+#navbar {
+    overflow: hidden;
+    background-color: black;
+    border-bottom: solid 15px red;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Container */
+#container {
+    margin: 2% 5% 100px 5%; /* shorthand update */
+    padding: 10px;
+}
+
+/* Card */
+.card {
+    box-shadow: 0 4px 8px 0 black;
+    transition: 0.3s;
+    width: 50%;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    font-weight: 400;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 black;
+}
+
+/* Movies Table Styles */
+#movies {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#movies th {
+    padding: 12px 12px;
+    text-align: left;
+    background-color: #f2f2f2;
+}
+
+#movies td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    position: fixed; /* Updated from absolute to fixed */
+    left: 0; 
+    text-align: left;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: white;
+    font-weight: 400;
+    padding-right: 10px;
+    font-style: italic;
+}
+
+.copy {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.portal {
+    text-align: right;
+}
+
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
