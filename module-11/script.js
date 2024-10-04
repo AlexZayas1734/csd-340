@@ -1,30 +1,30 @@
-let toDos = [];
+let toDos = []; // Array to hold to-do items
 
 function addToDo() {
     const input = document.getElementById('todoInput');
-    const todo = input.value.trim();
-    if (todo) {
-        toDos.push(todo);
-        alert('Added: ' + todo);
-        input.value = ''; // Important to Clear the input
-    } else {
-        alert('Please enter a task!');
-    }
-}
-
-function deleteLastToDo() {
-    if (toDos.length > 0) {
-        toDos.pop();
-        alert('Last entry deleted.');
-    } else {
-        alert('No more tasks to delete!');
+    if (input.value.trim() !== '') { // make sure input value is not empty
+        toDos.push(input.value.trim()); // add input value to toDos Array
+        input.value = ''; // Clear the input after adding
     }
 }
 
 function displayToDos() {
     const list = document.getElementById('todoList');
-    list.innerHTML = ''; // Making sure list is empty first
+    list.innerHTML = ''; // Clear existing entries
     toDos.forEach((todo, index) => {
-        list.innerHTML += (index + 1) + '. ' + todo + '<br>';
+        const item = document.createElement('li'); // Create a new list item for each todo
+        item.textContent = (index + 1) + '. ' + todo + ' ';
+
+        const deleteButton = document.createElement('button'); // Create a delete button for each item
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = function() { deleteToDo(index); }; // Assign a function to delete this item
+
+        item.appendChild(deleteButton); // Append the button to the list item
+        list.appendChild(item); // Append the list item to the list
     });
+}
+
+function deleteToDo(index) {
+    toDos.splice(index, 1); // Remove the item at the specified index
+    displayToDos(); // display the list after the delete
 }
