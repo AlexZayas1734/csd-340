@@ -1,0 +1,74 @@
+/*
+Alexander Zayas
+Module 12.2
+October 12th, 2024
+*/
+
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#left-div, #right-div {
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+}
+
+#right-div {
+    margin-right: 0;
+}
+
+#bottom-div {
+    width: 100%;
+    margin-top: 60%;
+    float: right;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+ol, ul {
+    font-weight: 300;
+}
+
+ol {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style-position: inside;
+}
+
+ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: upper-roman inside;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Override The number Styling of the Book List when reversed (or when the reversed class is applied to the ol )*/
+#bookList.reversed {
+    list-style-type: none;
+    counter-reset: item 11; /* Initializes a counter named item and starts its count from 11. The value 11 is chosen because it's one more than the total number of items. This setup is for counting down from 10. */
+}
+#bookList.reversed li {
+    counter-increment: item -1; /* Decrements the item counter */
+}
+#bookList.reversed li:before {
+    content: counter(item) ". ";
+}
